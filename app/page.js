@@ -83,7 +83,7 @@ export default function Home() {
               <p>(0312) 420 58 42/43</p>
             </div>
 
-            <div className='flex flex-col items-center sm:mt-5'>
+            <div className='flex flex-col items-center 3xl:mt-5'>
               <GrLocation size={30} />
               <p className='text-center text-base sm:text-xs w-[300px] sm:w-[250px]'>
                 Türkiye Büyük Millet Meclisi Halkla İlişkiler Binası Oda No: B416 Bakanlıklar
