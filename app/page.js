@@ -1,112 +1,106 @@
 import Image from 'next/image'
 
+import { AiFillFacebook, AiOutlineMail } from 'react-icons/ai'
+import { BsTwitter } from 'react-icons/bs'
+import { TbDeviceLandlinePhone } from 'react-icons/tb'
+import { GrLocation } from 'react-icons/gr'
+import Link from 'next/link'
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main>
+      <div className='flex flex-col sm:flex-row sm:h-[calc(100vh-120px)] rounded-lg sm:p-10 pt-4'>
+        <div className='sm:w-2/3 flex flex-col sm:flex-row justify-center items-center'>
+          <div className='h-full w-full relative'>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src='/main.webp'
+              alt='img'
+              width={1500}
+              height={1500}
+              quality={100}
+              className='object-fill w-full h-full sm:rounded-l-lg pointer-events-none z-50'
             />
-          </a>
+            <Image
+              src='/logo.webp'
+              alt='img'
+              width={100}
+              height={100}
+              className='absolute top-0 right-0 object-cover pointer-events-none'
+            />
+          </div>
+          {/*imza*/}
+          <Image
+            src='/imza.webp'
+            alt='img'
+            width={800}
+            height={500}
+            quality={100}
+            className='absolute w-52 3xl:w-[800px] bottom-[400px] right-[-30px] sm:w-[500px] sm:bottom-20 sm:right-[600px] 3xl:bottom-24  3xl:right-[700px] pointer-events-none'
+          />
         </div>
-      </div>
+        <div className='sm:w-1/3 flex flex-col items-center justify-center rounded-r-lg shadow-2xl'>
+          <Image
+            src='/TBMM.jpg'
+            alt='meclis'
+            width={400}
+            height={300}
+            className='relative -top-20 sm:relative sm:-top-10 -z-10 3xl:static px-2 sm:px-0 rounded-lg pointer-events-none sm:w-[300px] sm:h-[300px]  object-cover'
+          />
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+          <p className='relative -top-28 sm:relative sm:-top-24 3xl:static px-5 3xl:px-12 leading-6 text-center select-none text-sm 3xl:text-base'>
+            2004 yılında Ankara Üniversitesi Eczacılık Fakültesini bitirdim. Mezuniyet sonrası Mamak
+            {`'`}ta serbest eczacılık yaptım ve Türk Eczacıları Birliği delegesi oldum. 35., 36. ve
+            37. Cumhuriyet Halk Partisi Olağan Kurultaylarında Parti Meclisi üyesi seçildim. 7
+            Haziran 2015 Genel Seçimi öncesi Ankara{`'`}da CHP Milletvekili adaylığı için
+            gerçekleşen ön seçimde 5. sırada çıktım. 24 Haziran 2018 Genel Seçimi{`'`}nde Ankara 1.
+            Bölge 5. sıra Milletvekili adayı oldum ve seçildim. Kadın ve çocuk hakları, sosyal
+            güvenlik, sağlık ve ilaç politikaları hakkında çalışmalar ve projeler yapıyorum. TBMM
+            Kadın Erkek Fırsat Eşitliği Komisyonu üyesiyim. Kasım ayından itibaren CHP Genel Başkan
+            Yardımcısı olarak görev yapmaktayım.
           </p>
-        </a>
+          <div className='relative -top-14 sm:relative sm:-top-24 3xl:static sm:mt-10 3xl:mt-20 flex gap-5'>
+            <Link href={'https://www.facebook.com/eczgamzetascier'} target='_blank'>
+              <AiFillFacebook size={40} className='fill-blue-500' />
+            </Link>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <Link href={'https://www.instagram.com/gamze_tascier/'} target='_blank'>
+              <img src='/instagram.png' alt='instagram' className='w-10 h-10' />
+            </Link>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <Link href={'https://twitter.com/gamzetascier'} target='_blank'>
+              <BsTwitter size={40} className='fill-blue-500' />
+            </Link>
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className=' sm:relative sm:-top-24 3xl:static flex flex-col 3xl:flex-row justify-center items-center gap-10 sm:gap-2 3xl:gap-10 sm:mt-10 3xl:mt-20 container mb-10 sm:mb-0'>
+            <div className='flex flex-col items-center'>
+              <AiOutlineMail size={30} />
+              <p>gamze.tascier@tbmm.gov.tr</p>
+            </div>
+
+            <div className='flex flex-col items-center'>
+              <TbDeviceLandlinePhone size={30} />
+              <p>(0312) 420 58 42/43</p>
+            </div>
+
+            <div className='flex flex-col items-center sm:mt-5'>
+              <GrLocation size={30} />
+              <p className='text-center text-base sm:text-xs w-[300px] sm:w-[250px]'>
+                Türkiye Büyük Millet Meclisi Halkla İlişkiler Binası Oda No: B416 Bakanlıklar
+                Çankaya/Ankara
+              </p>
+            </div>
+
+            <Link
+              href={
+                'https://www.tbmm.gov.tr/milletvekili/milletvekilidetay?DonemId=134155f0-c3d6-4d24-893b-f3a2ef695ae7&Id=f72877c2-d9e0-037b-e050-007f01005610'
+              }
+              target='_blank'
+              className='bg-gray-800 text-white py-2 px-5 rounded-lg text-sm sm:hidden'>
+              TBMM SAYFASI
+            </Link>
+          </div>
+        </div>
       </div>
     </main>
   )
